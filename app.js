@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const admin = require('firebase-admin');
@@ -12,7 +13,7 @@ if (!fs.existsSync(serviceAccountPath)) {
   process.exit(1);
 }
 
-const serviceAccount = require(serviceAccountPath);
+const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
