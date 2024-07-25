@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>BMI Calculator</h1>
+    <form action="/calculate" method="post">
+      <div>
+        <label for="weight">Weight</label>
+        <input type="number" step="any" name="weight" id="weight" required placeholder="Kilograms">
+      </div>
+      <div>
+        <label for="height">Height</label>
+        <input type="number" step="any" name="height" id="height" required placeholder="Meters">
+      </div>
+      <button type="submit">CALCULATE</button>
+    </form>
+    <% if (typeof bmi !== 'undefined') { %>
+    <div class="result">
+      <h2>Your Body Mass Index is <br> <%= bmi %></h2>
+    </div>
+    <% } %>
+  </div>
+</body>
+</html>
