@@ -6,7 +6,7 @@ const fs = require('fs');
 
 const app = express();
 
-const serviceAccountPath = path.join(__dirname, 'bmi-calculator-472bb-firebase-adminsdk-mbi36-e0b67eef4d.json');
+const serviceAccountPath = path.join(__dirname, 'bmi-calculator-472bb-firebase-adminsdk-mbi36-55416a0bf9.json');
 if (!fs.existsSync(serviceAccountPath)) {
   console.error('Service account JSON file not found:', serviceAccountPath);
   process.exit(1);
